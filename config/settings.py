@@ -78,15 +78,15 @@ DATABASES = {
 
     'default': {
 
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
 
-        'NAME': 'test',
+        'NAME': 'postgres',
 
-        'USER': 'akta',
+        'USER': 'postgres',
 
         'PASSWORD': 'aktan',
 
-        'HOST': 'localhost',
+        'HOST': 'dock_db',
 
         'PORT': '5432',
 

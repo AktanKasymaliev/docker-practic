@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+    dock_db:
+        image: postgres:10.1-alpine
+        volumes: 
+            - postgres_data:/var/lib/postgresql/data/
+    dock_web:
+        build: .
+        command: python /home/root9/projects/docker_practic/manage.py runserver 0.0.0.0:8000
+        volumes: 
+            - .:/home/root9/projects/docker_practic/
+        ports: 
+            - 8000:8000
+        depends_on: 
+            - dock_db
+
+volumes: 
+    postgres_data:
